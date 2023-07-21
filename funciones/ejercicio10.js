@@ -1,8 +1,10 @@
 function esPalindromo(cadena) {
     const cadenaSinEspacios = cadena.replace(/\s/g, "").toLowerCase();
-    const cadenaReversa = cadenaSinEspacios.split("").reverse();
+    const cadenaReversa = cadenaSinEspacios.split("").reverse().join("");
 
+    console.log(cadenaSinEspacios,cadenaReversa);
     return cadenaSinEspacios === cadenaReversa;
+
 }
 
 const cadena = prompt("Escribe un string: ");
