@@ -271,3 +271,295 @@ Adjust the code so that the final value of text is logged. */
 const result = func();
 console.log(result); */
 
+/* In the code below, we define a function multiply that has a parameter called num. The function returns num multiplied by itself.
+Adjust the code below such that the console.log() statement logs true. */
+
+/* function multiply(num) {
+  return num * num;
+}
+
+let result = multiply(5);
+
+console.log(result === 25); 
+ */
+
+/* In this exercise, the function multiply has two parameters x and y. Adjust the code such that the console.log() statement logs true. */
+
+/* function multiply(x, y) {
+  return x * y;
+}
+
+let result = multiply(5, 4);
+
+console.log(result === 20);
+ */
+
+/* In this exercise, the function func defines the parameters a and b. But, currently only 1 argument is passed to the function. Therefore, the value of b is undefined.
+Adjust the code below so that the console.log() statement logs hello world. */
+/* function func(a, b) {
+  return a + " " + b;
+}
+
+let result = func("hello", "world");
+
+console.log(result); 
+ */
+
+/* As we have seen in a previous exercise, a return statement blocks any code following the statement from being executed. But, this is only true if the return statement actually runs. Using an if...statement, we can prevent a code from being executed if a condition is not met.
+In the code below we use this pattern to stop a function early if the parameter num is smaller than 5.
+Adjust the code so that the value of result is 25. */
+
+/* function multiplyIfGreaterThan5(num) {
+  if (num < 5) {
+    return;
+  }
+  return num * num;
+}
+
+let result = multiplyIfGreaterThan5(5);
+
+console.log(result);
+ */
+
+/* In this exercise, we have an array called arr. In the console.log() statement we use the array.length property to get the number of array elements. The statement logs true if the array has 3 elements.
+Task: Add a third element to the array. It can have any value. */
+
+/* let arr = [1, 2];
+arr.push(3); 
+
+console.log(arr.length === 3); 
+ */
+/* In the code below we try the access the first element of the array. But, we introduced a slight mistake. Fix the mistake and run the code. */
+/* let arr = [1, 2, 3];
+let firstElement = arr[0];
+
+console.log(firstElement); 
+ */
+
+/* Using what we learned earlier, let's write a generic function that returns the last element of an array we pass to it. As you can see, we use that function to get the last element of both arrOne and arrTwo. But, the function is not complete yet. Add what's missing to get the last element of any array we pass to it – you may need to use the Array.length property. */
+
+/* function getLastElement(arr) {
+  if (arr.length === 0) {
+    return undefined; 
+  }
+
+  return arr[arr.length - 1]; 
+}
+
+let arrOne = [1, 2, 3];
+let arrTwo = [4, 5, 6, 7];
+
+let lastElementArrOne = getLastElement(arrOne);
+let lastElementArrTwo = getLastElement(arrTwo);
+
+console.log(lastElementArrOne); 
+console.log(lastElementArrTwo); 
+ */
+
+/* Sometimes we want to know where a specific element is located inside an array. That's what the method array.indexOf() is for. This method returns the index position of a specific element inside an array.
+For example ['a', 'b'].indexOf('a') returns 0 because that's the index of the string 'a' within the given array.
+You can also find out if a specific element is not present inside an array. ['a', 'b'].indexOf('c') returns -1 which means that 'c' does not exist in the array.
+In the code below we use the array.indexOf() method to get the index of an element. Later on, we use that index to retrieve this element and compare it to the expected value. But there is something mixed up. Change the code below such that the console.log() statement logs true. */
+/* let arr = ['apple', 'banana', 'orange'];
+let element = 'banana';
+let index = arr.indexOf(element);
+let retrievedElement = arr[index];
+
+console.log(retrievedElement === element); 
+ */
+
+/* With the array.push() method we can add an element to an array. It can be applied to an existing array to append new values to the end of the array.
+In the example below, we apply the array.push() method to extend the array numbers with the number 3. To solve this task, append another number to the end of the array. Use the correct number for the console.log() statement to log true. */
+
+/* let numbers = [1, 2];
+numbers.push(3); 
+
+console.log(numbers[2] === 3); 
+ */
+
+/* The animal object has a property lifespan. Assign the value of this property to the variable lifespan. */
+/* let animal = {
+  species: "Lion",
+  color: "Yellow",
+  lifespan: 15
+};
+
+let lifespan = animal.lifespan;
+
+console.log(lifespan); // Output: 15
+ */
+
+/* Add a property with key year and value 2020 to the object car. */
+/* let car = {
+  make: "Toyota",
+  model: "Corolla",
+  color: "Silver"
+};
+
+car.year = 2020;
+
+console.log(car);
+ */
+
+/* he person object is empty. Add properties with keys name and age and enter appropriate values. */
+/* let person = {};
+
+person.name = "John";
+person.age = 30;
+
+console.log(person);
+ */
+
+/* In the code below we have a for-loop where we create a counter-variable i with the value 1. As long as i is smaller than 3 the loop keeps running. After each iteration i is incremented by 1. In each iteration we log the current value of i. We also add the value of i to the variable result.
+Task: Adjust the code such that the console.log() logs true.
+Tipp: Be careful not to implement an infinite loop! */
+
+/* In the code below we have a for-loop where we create a counter-variable i with the value 1. As long as i is smaller than 3 the loop keeps running. After each iteration i is incremented by 1. In each iteration we log the current value of i. We also add the value of i to the variable result.
+Task: Adjust the code such that the console.log() logs true.
+Tipp: Be careful not to implement an infinite loop! */
+
+/* let result = 0;
+
+for (let i = 1; i < 3; i++) {
+  console.log(i); 
+  result += i; 
+}
+
+console.log(result === 3); 
+ */
+
+/* Our second for-loop exercise shows how you can use a loop to iterate over the elements of an array. In this example, we will filter numbers from an existing array. The loop iterates over each element of the array mixed. If the current element is of type number, it will append it to the array newArray.
+To solve this task, complete the loop expressions inside the brackets. */
+
+/* let mixed = [1, "apple", 2, "orange", 3, "banana"];
+let newArray = [];
+
+for (let i = 0; i < mixed.length; i++) {
+  if (typeof mixed[i] === "number") {
+    newArray.push(mixed[i]);
+  }
+}
+
+console.log(newArray); 
+ */
+
+/* In this exercise you will learn how to abort a running loop even though its condition is still satisfied.
+You can use the break statement to achieve this. You can place the break statment anywhere inside the code-block of a loop. As soon as break is evaluated, the loop is terminated. Usually, you would place break behind an if condition. Then, the loop will only abort if a certain condition met.
+In the example below, we iterate through the elements of the array mixed. In each iteration, we append the current element of mixed to the new array newArray. But, in this exercise we want to abort the loop if the current element is not of type number.
+Complete the if statement below and execute break if the current element is not of type number. */
+
+/* let mixed = [1, "apple", 2, "orange", 3, "banana"];
+let newArray = [];
+
+for (let i = 0; i < mixed.length; i++) {
+  if (typeof mixed[i] !== "number") {
+    break;
+  }
+  newArray.push(mixed[i]);
+}
+
+console.log(newArray);
+ */
+
+/* In this exercise you will learn how to create a while loop. This loop is very similar to a for loop. The syntax is while (condition) { statement }. It reads: As long as the condition is met, execute the statement. It's basically an if statement that is repeated until the condition is no longer met.
+In the example below we execute a while loop. As long as the condition of the loop is met, num increases by 2 and i by 1. Adjust the condition of the while loop so that the final value of num is 60. */
+
+/* let num = 0;
+let i = 0;
+
+while (num <= 60) {
+  num += 2;
+  i++;
+}
+
+console.log(num); // Output: 60
+ */
+
+/* Here, we have a function calculatePrice that calculates the total price of a product. We execute that function and save the result in the variable total.
+But, the code will not work like this because we can not access the variable result from outside the function. Correctly save the result of calculatePrice in the variable total. */
+/* function calculatePrice(price, quantity) {
+  return price * quantity;
+}
+
+let total = calculatePrice(10, 5);
+
+console.log(total); 
+ */
+
+/* We want to use the function func to update the global variable x. But when we run the code, the value of global x is not updated. Adjust the code so that the final value of global x is 2. */
+
+/* let x = 1;
+
+function func() {
+  x = 2; 
+}
+
+func();
+console.log(x); 
+ */
+
+/* Use what you have learned about Function Scope to make the function multiply return the value 50. */
+
+/* let x = 10;
+
+function multiply() {
+  return x * 5;
+}
+
+let result = multiply();
+console.log(result); 
+ */
+
+/* Adjust the code so that result is the sum of x and the block version of y. */
+
+/* let x = 10;
+let y;
+
+{
+  let yBlock = 5;
+  y = yBlock;
+}
+
+let result = x + y;
+console.log(result); 
+ */
+
+/* djust the code such that the logged value of x is 30. */
+
+/* let x = 10;
+
+{
+  let x = 20;
+  x += 10; 
+  console.log(x); 
+}
+
+console.log(x); 
+ */
+
+/* Here we pass a function as argument to getValue. However, we do not use it yet. Use the callback function so that the value 5 is logged. */
+
+/* function getValue(callback) {
+  let value = 5;
+  callback(value);
+}
+
+getValue(function (result) {
+  console.log(result); 
+});
+ */
+
+/* Use the multiply function as a callback function within getValue so that the final value of b is 10. */
+
+/* function getValue(callback) {
+  let a = 2;
+  let b = callback(a, 5);
+  console.log(b);
+}
+
+function multiply(x, y) {
+  return x * y;
+}
+
+getValue(multiply);
+ */
