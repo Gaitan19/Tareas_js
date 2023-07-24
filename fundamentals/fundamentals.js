@@ -153,3 +153,37 @@ console.log(fixWords(javascript", ntrsydeuocid, owntown));*/
 // Ejemplo de uso:
 console.log(findNextHigherPrime(10)); 
  */
+
+/* Write a function that takes two numbers, say x and y, as arguments. Check if x is divisible by y. If yes, return x. If not, return the next higher natural number that is divisible by y */
+/* function findNextHigherDivisibleNumber(x, y) {
+  if (x % y === 0) {
+    return x;
+  } else {
+    return Math.ceil(x / y) * y;
+  }
+}
+
+
+console.log(findNextHigherDivisibleNumber(10, 3)); */
+
+/* Write a function that takes two strings (a and b) as arguments. Beginning at the end of 'a', insert 'b' after every 3rd character of 'a'. Return the resulting string. */
+
+/* function insertAfterEveryThird(a, b) {
+  return a.split('').reverse().map((char, index) => (index % 3 === 0 && index !== 0) ? [b, char] : char).join('');
+}
+
+console.log(insertAfterEveryThird('abcdefghij', 'XYZ'));
+ */
+
+/* Write a function that takes a string as argument. As it is, the string has no meaning. Increment each letter to the next letter in the alphabet. Return the correct word */
+
+/* function incrementLetters(str) {
+  const alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  return str.replace(/[a-zA-Z]/g, char => {
+    const index = alphabet.indexOf(char);
+    const nextIndex = (index + 1) % 52;
+    return alphabet[nextIndex];
+  });
+}
+
+console.log(incrementLetters('abcXYZ'));*/
