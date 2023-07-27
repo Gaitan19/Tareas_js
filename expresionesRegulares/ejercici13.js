@@ -5,7 +5,6 @@ function validarFecha(texto) {
     return fechaRegExp.test(texto);
   }
 
-
   
   function validarEmail(email) {
     const emailRegExp = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}$/;
@@ -39,7 +38,6 @@ function escapeHTML(text) {
     return cleanHtml;
   }
   
-  // Pruebas
   const fechaNacimiento = "Nací el 19/06/2003 en managua."
   console.log(`${fechaNacimiento}=`,validarFecha(fechaNacimiento)); 
   
@@ -47,12 +45,12 @@ function escapeHTML(text) {
   console.log(`el correo: ${email} es:`,validarEmail(email)); 
   
   const nombreCompleto = "Kenley Gaitan";
-  console.log(`nombre invertido de ${nombreCompleto}:`,invertirNombreApellido(nombreCompleto)); // "Smith, John"
+  console.log(`nombre invertido de ${nombreCompleto}:`,invertirNombreApellido(nombreCompleto)); 
   
   const html = "<p>hola mundo.</p><script>alert('Hola');</script><div>buenos dias</div><script></script>";
-  console.log(`fragmento hmtl: ${html}\nsin etiqueta script:`,eliminarEtiquetasScript(html)); // "<p>Este es un párrafo.</p><div>Otra etiqueta</div>"
+  console.log(`fragmento hmtl: ${html}\nsin etiqueta script:`,eliminarEtiquetasScript(html)); 
   
   const textoConHTML = eliminarEtiquetasScript(html);
   console.log(`fragmento html: ${textoConHTML}\nReescrito:`,escapeHTML(textoConHTML));
-  // "&lt;h1&gt;Título&lt;/h1&gt;&lt;p&gt;Párrafo&lt;/p&gt;&lt;script&gt;console.log('¡Hola!');&lt;/script&gt;"
+ 
   
