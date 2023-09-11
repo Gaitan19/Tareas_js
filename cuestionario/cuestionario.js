@@ -124,6 +124,10 @@ recibir un objeto que tendrá los nombres nuevos para la persona, y devolverá u
 información de la persona, pero con los nombres nuevos.
 La función no necesariamente alterará todos los nombres, es decir, puede ser que solo necesite alterar firstName. */
 
+const changeName = (newDataPerson) => {
+  const newPerson = personalInfo.map((person) => {});
+};
+
 /* A partir del siguiente array, realiza los siguientes puntos:
 const exerciseArray = [8, 1, 0, 3, 6, 7, 7, 3, 2, 10, 2, 5, 9, 2, 10, 1, 5, 8, 4, 10, 8, 3, 4, 8, 7, 6, 10, 2, 3, 4]; */
 // 1: Crea una función que ordene el arreglo de mayor a menor usando el método SORT
