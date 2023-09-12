@@ -22,6 +22,10 @@ respuesta: valores truthy: "string",1,true.
 falsy:null,undefine,false,0,"".
 */
 
+const handleSaludo = (ciudad, pais) => {
+  return console.log(`Saludos desde ${ciudad}, ${pais}`);
+};
+
 /* - Crear un objeto que represente a una persona y que contenga los siguientes atributos:
     -- Nombres
     -- Apellidos
@@ -31,6 +35,9 @@ falsy:null,undefine,false,0,"".
 //   nombres: "Kenley Josue",
 //   apellidos: "Gaitan Evanks",
 //   edad: 20,
+// saludo: () => {console.log(`Hola ${this.nombres} ${this.apellidos}`);
+//   if (this.edad > 18) return console.log("Es mayor de edad");
+//   return console.log("Es menor de edad");}
 // };
 //
 
@@ -62,10 +69,8 @@ resultado de la operación. */
 //       break;
 
 //     case "-":
-//       result =
-//         number1 > number2
-//           ? number1 - number2
-//           : "the first number must be higher than the second number";
+//       result = number1 - number2;
+//
 //       break;
 
 //     case "*":
@@ -163,32 +168,32 @@ let exerciseArray = [
 // console.log("sorted array", sortedArray);
 
 // 2: Usando un ciclo FOR, encuentra el número que se repite mas ocasiones
-// function handleMostRepeatedNumber(array) {
-//   let mostRepeatedNumber;
-//   let maxReps = 0;
+function handleMostRepeatedNumber(array) {
+  let mostRepeatedNumber;
+  let maxReps = 0;
 
-//   for (let i = 0; i < array.length; i++) {
-//     const number = array[i];
-//     let repetitions = 1;
+  for (let i = 0; i < array.length; i++) {
+    const number = array[i];
+    let repetitions = 1;
 
-//     for (let j = i + 1; j < array.length; j++) {
-//       if (array[j] === number) {
-//         repetitions++;
-//       }
-//     }
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[j] === number) {
+        repetitions++;
+      }
+    }
 
-//     if (repetitions > maxReps) {
-//       maxReps = repetitions;
-//       mostRepeatedNumber = number;
-//     }
-//   }
+    if (repetitions > maxReps) {
+      maxReps = repetitions;
+      mostRepeatedNumber = number;
+    }
+  }
 
-//   return console.log(
-//     `The most repeated number is ${mostRepeatedNumber} with ${maxReps} repetitions.`
-//   );
-// }
+  return console.log(
+    `The most repeated number is ${mostRepeatedNumber} with ${maxReps} repetitions.`
+  );
+}
 
-// handleMostRepeatedNumber(exerciseArray);
+handleMostRepeatedNumber(exerciseArray);
 
 // 3: Usando la función MAP, crea un arreglo que contenga el valor de cada item del arreglo original, elevado al cuadrado.
 // Por ejemplo, el inicio del nuevo arreglo sería [64, 1, 0, 9].
