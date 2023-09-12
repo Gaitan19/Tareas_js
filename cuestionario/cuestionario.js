@@ -3,6 +3,10 @@
 respuesta: las variables definidas con var existe de manera global, let solo existe solo en el bloque donde s define
  y las variables definidas con const su valor nunca va a cambiar(las variables definidas con var y let su valor si puede cambiar)
 2. Con tus palabras, explica que son variables, objetos, arreglos y funciones.
+variables: contenedores de informacion de algun determinado tipo
+objetos: estructuras que pueden agrupar diferentes tipos de informacion
+arreglos: listas de elmentos del mismo tipo
+funciones: piezas de codigos reutilizables que efecutan alguna determinada accion o tarea
 
 
 3. Como recibe información (input) una función, y como devuelve un resultado?
