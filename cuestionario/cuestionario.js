@@ -78,7 +78,7 @@ resultado de la operación. */
 //       break;
 //   }
 
-//   console.log(`El resultado de ${number1} ${operation} ${number2} = ${result}`);
+//   console.log(`The result of ${number1} ${operation} ${number2} = ${result}`);
 // };
 
 // calculator(10, 15, "/");
@@ -98,24 +98,18 @@ const contactInfo = {
 1. Utilizando el spread operator (...) crea una función que reciba ambos objetos, los combine en uno solo y retorne el objeto nuevo.
 Guárdalo en una constante llamada "person". */
 
-const combineObjects = (object1, object2) => {
-  const object = {
-    ...object1,
-    ...object2,
-  };
-  console.log("el nuevo objeto es: ", object);
-  //
-  const { firstName, lastName, phoneNumber } = object;
-  console.log("los datos extraidos son: ", firstName, lastName, phoneNumber);
-};
+// const combineObjects = (object1, object2) => {
+//   const object = {
+//     ...object1,
+//     ...object2,
+//   };
+//   console.log("el nuevo objeto es: ", object);
+//   //
+//   const { firstName, lastName, phoneNumber } = object;
+//   console.log("The extracted data is: ", firstName, lastName, phoneNumber);
+// };
 
 // combineObjects(personalInfo, contactInfo);
-
-let newPersonalInfo = {
-  firstName: "Kenley",
-  middleName: "Josue",
-  lastName: "Gaitan",
-};
 
 /* 2. Del objeto creado en el punto anterior, destructura los atributos: firstName, lastName, phoneNumber. */
 
@@ -124,9 +118,26 @@ recibir un objeto que tendrá los nombres nuevos para la persona, y devolverá u
 información de la persona, pero con los nombres nuevos.
 La función no necesariamente alterará todos los nombres, es decir, puede ser que solo necesite alterar firstName. */
 
-const changeName = (newDataPerson) => {
-  const newPerson = personalInfo.map((person) => {});
-};
+// const newPersonalInfo = {
+//   firstName: "Manolo",
+//   lastName: "Sanchez",
+// };
+
+// function changeInfo(newData) {
+//   const newPersonalInfo = { ...personalInfo };
+
+//   for (const key in newData) {
+//     if (newData.hasOwnProperty(key)) {
+//       newPersonalInfo[key] = newData[key];
+//     }
+//   }
+
+//   return newPersonalInfo;
+// }
+
+// const infoUpdated = changeInfo(newPersonalInfo);
+// console.log("previous information:", personalInfo);
+// console.log("new information", infoUpdated);
 
 /* A partir del siguiente array, realiza los siguientes puntos:
 const exerciseArray = [8, 1, 0, 3, 6, 7, 7, 3, 2, 10, 2, 5, 9, 2, 10, 1, 5, 8, 4, 10, 8, 3, 4, 8, 7, 6, 10, 2, 3, 4]; */
@@ -137,7 +148,43 @@ let exerciseArray = [
   6, 10, 2, 3, 4,
 ];
 
+// function handleOrder(array) {
+//   const newArray = [...array];
+
+//   return newArray.sort((a, b) => b - a);
+// }
+
+// const sortedArray = handleOrder(exerciseArray);
+// console.log("unordered array", exerciseArray);
+// console.log("sorted array", sortedArray);
+
 // 2: Usando un ciclo FOR, encuentra el número que se repite mas ocasiones
+// function handleMostRepeatedNumber(array) {
+//   let mostRepeatedNumber;
+//   let maxReps = 0;
+
+//   for (let i = 0; i < array.length; i++) {
+//     const number = array[i];
+//     let repetitions = 1;
+
+//     for (let j = i + 1; j < array.length; j++) {
+//       if (array[j] === number) {
+//         repetitions++;
+//       }
+//     }
+
+//     if (repetitions > maxReps) {
+//       maxReps = repetitions;
+//       mostRepeatedNumber = number;
+//     }
+//   }
+
+//   return console.log(
+//     `The most repeated number is ${mostRepeatedNumber} with ${maxReps} repetitions.`
+//   );
+// }
+
+// handleMostRepeatedNumber(exerciseArray);
 
 // 3: Usando la función MAP, crea un arreglo que contenga el valor de cada item del arreglo original, elevado al cuadrado.
 // Por ejemplo, el inicio del nuevo arreglo sería [64, 1, 0, 9].
@@ -152,12 +199,22 @@ let exerciseArray = [
 
 // 4: Usando la función FILTER, crea un arreglo con los números impares, y otro arreglo con los números pares.
 
-console.log("Base array: ", exerciseArray);
+// console.log("Base array: ", exerciseArray);
 
-const parArray = exerciseArray.filter((array) => array % 2 === 0);
-console.log("Par array: ", parArray);
+// const parArray = exerciseArray.filter((array) => array % 2 === 0);
+// console.log("Par array: ", parArray);
 
-const imParArray = exerciseArray.filter((array) => array % 2 !== 0);
-console.log("Impar array: ", imParArray);
+// const imParArray = exerciseArray.filter((array) => array % 2 !== 0);
+// console.log("Impar array: ", imParArray);
 
 // 5: Usando la funcion REDUCE, calcula el promedio de los números en el arreglo.
+const total = exerciseArray.reduce(
+  (acumulator, number) => acumulator + number,
+  0
+);
+
+const promedio = total / exerciseArray.length;
+
+console.log(
+  `The average of the numbers in the array "${exerciseArray}"\n is: ${promedio}`
+);
