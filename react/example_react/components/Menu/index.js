@@ -21,6 +21,7 @@ import Card from './card';
 import Carrusel from './carrusel';
 import Modal from './modal';
 import Chart from './chart';
+import SideBar from './sideBar';
 
 const Menu = () => {
   const [visible, setVisible] = useState(false);
@@ -93,7 +94,7 @@ const Menu = () => {
           aria-labelledby="disabled-tab-pane"
           visible={activeKey === 4}
         >
-          <Chart></Chart>
+          {/* <Chart></Chart> */}
         </CTabPane>
       </CTabContent>
     </div>
