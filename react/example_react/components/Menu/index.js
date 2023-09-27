@@ -24,7 +24,7 @@ import Chart from './chart';
 
 const Menu = () => {
   const [visible, setVisible] = useState(false);
-  const [activeKey, setActiveKey] = useState(1);
+  const [activeKey, setActiveKey] = useState(4);
 
   return (
     <div className="Container">

@@ -18,7 +18,7 @@ const Chart = () => {
         datasets: [
           {
             label: 'GitHub Commits',
-            backgroundColor: '#f87979',
+            backgroundColor: '#fbcd8d',
             data: [40, 20, 12, 39, 10, 40, 39, 80, 40],
           },
         ],
@@ -51,6 +51,9 @@ const Chart = () => {
           },
         },
       }}
+      height={110}
+      width={290}
+      customTooltips={false}
     />
   );
 };
