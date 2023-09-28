@@ -9,7 +9,7 @@ import { useState } from 'react';
 import Menu from '../Menu';
 
 const Layout = (props) => {
-  const { children } = props;
+  const { children, customClass } = props;
 
   const [visible, setVisible] = useState(true);
 
@@ -27,7 +27,7 @@ const Layout = (props) => {
       </CNavbar>
 
       <div className="Container-content">
-        <div className="Container-options">{children}</div>
+        <div className={`Container-options ${customClass}`}>{children}</div>
       </div>
 
       <Menu visible={visible} setVisible={setVisible}></Menu>
@@ -37,10 +37,12 @@ const Layout = (props) => {
 
 Layout.propTypes = {
   children: PropTypes.node,
+  customClass: PropTypes.string,
 };
 
 Layout.defaultProps = {
   children: <></>,
+  customClass: '',
 };
 
 export default Layout;
