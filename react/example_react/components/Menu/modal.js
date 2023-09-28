@@ -17,6 +17,7 @@ const Modal = () => {
     <>
       <CButton onClick={() => setVisible(!visible)}>Launch demo modal</CButton>
       <CModal
+        size="xl"
         visible={visible}
         onClose={() => setVisible(false)}
         aria-labelledby="LiveDemoExampleLabel"

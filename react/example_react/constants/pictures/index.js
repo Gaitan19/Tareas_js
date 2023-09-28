@@ -6,28 +6,6 @@ export const picturesImages = [
     id: v4(),
     pictureImage: [
       {
-        image: '/picture.png',
-      },
-      {
-        image: '/picture1.png',
-      },
-    ],
-  },
-  {
-    id: v4(),
-    pictureImage: [
-      {
-        image: '/picture2.png',
-      },
-      {
-        image: '/picture3.png',
-      },
-    ],
-  },
-  {
-    id: v4(),
-    pictureImage: [
-      {
         image: '/picture5.png',
       },
       {
