@@ -17,3 +17,11 @@ body {
         max-width: 430px;
     }
 }
+
+.Card {
+    &-image {
+        max-height: 202.5px;
+        min-height: 202.5px;
+        overflow: hidden;
+    }
+}

@@ -9609,4 +9609,9 @@ h1, .h1, h2, .h2, h3, .h3 {
     gap: 10px;
     max-width: 430px; }
 
+.Card-image {
+  max-height: 202.5px;
+  min-height: 202.5px;
+  overflow: hidden; }
+
 /*# sourceMappingURL=main.css.map */

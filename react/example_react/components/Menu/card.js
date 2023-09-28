@@ -6,7 +6,7 @@ const Card = (props) => {
 
   return (
     <CCard style={{ width: '18rem' }}>
-      <CCardImage orientation="top" src={picture} />
+      <CCardImage orientation="top" src={picture} className="Card-image" />
       <CCardBody>
         <CCardText>{text}</CCardText>
       </CCardBody>
