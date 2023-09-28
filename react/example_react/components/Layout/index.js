@@ -15,7 +15,11 @@ const Layout = (props) => {
 
   return (
     <div className="Container">
-      <CNavbar colorScheme="light" className="bg-light Navbar">
+      <CNavbar
+        colorScheme="light"
+        className="bg-light Navbar"
+        placement="sticky-top"
+      >
         <CContainer fluid>
           <CNavbarBrand></CNavbarBrand>
           <CNavbarToggler
