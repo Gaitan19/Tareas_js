@@ -4,11 +4,32 @@ import {
   COffcanvasTitle,
   CCloseButton,
   COffcanvasBody,
+  CNavItem,
+  CNavLink,
+  CNavbarNav,
 } from '@coreui/react';
+import { v4 } from 'uuid';
 import PropTypes from 'prop-types';
+import { useRouter } from 'next/router';
+import { menuOptions } from '@/constants/routes';
 
 const Menu = (props) => {
   const { visible, setVisible } = props;
+  const router = useRouter();
+
+  const renderMenu = () => {
+    return menuOptions.map((option) => {
+      const isActive = router.pathname === option.route;
+      console.log('option :>> ', option);
+      console.log('isActive :>> ', isActive);
+      console.log('_____________________________');
+      return (
+        <CNavItem key={v4()} className={` ${isActive && 'Item-active'}`}>
+          <CNavLink href={option.route}>{option.text}</CNavLink>
+        </CNavItem>
+      );
+    });
+  };
 
   return (
     <COffcanvas
@@ -29,13 +50,7 @@ const Menu = (props) => {
       </COffcanvasHeader>
 
       <COffcanvasBody>
-        {/* <CNavbarNav>
-      <CNavItem>
-        <CNavLink href="#">Hola</CNavLink>
-      </CNavItem>
-    </CNavbarNav> */}
-
-        {/* <TabMenu activeKey={activeKey} setActiveKey={setActiveKey} /> */}
+        <CNavbarNav>{renderMenu()}</CNavbarNav>
       </COffcanvasBody>
     </COffcanvas>
   );

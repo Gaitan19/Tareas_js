@@ -11,7 +11,7 @@ import Menu from '../Menu';
 const Layout = (props) => {
   const { children } = props;
 
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(true);
 
   return (
     <div className="Container">
@@ -26,7 +26,9 @@ const Layout = (props) => {
         </CContainer>
       </CNavbar>
 
-      <div>{children}</div>
+      <div className="Container-content">
+        <div className="Container-options">{children}</div>
+      </div>
 
       <Menu visible={visible} setVisible={setVisible}></Menu>
     </div>

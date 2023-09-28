@@ -1,11 +1,11 @@
 import HeadPage from '@/components/HeadPage';
-import Menu from '@/components/Menu';
+import Layout from '@/components/Layout';
 
 export default function Option2() {
   return (
     <>
       <HeadPage title="Example react" />
-      <Menu />
+      <Layout />
     </>
   );
 }
