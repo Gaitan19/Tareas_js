@@ -1,5 +1,6 @@
 import HeadPage from '@/components/HeadPage';
 import Layout from '@/components/Layout';
+import Material from '@/components/Material';
 import Chart from '@/components/Menu/chart';
 
 export default function MenuPrincipal() {
@@ -8,6 +9,7 @@ export default function MenuPrincipal() {
       <HeadPage title="Example react" />
       <Layout>
         <Chart></Chart>
+        <Material></Material>
       </Layout>
     </>
   );
