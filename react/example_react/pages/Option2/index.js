@@ -7,7 +7,7 @@ import Modal from '@/components/Menu/modal';
 export default function Option2() {
   return (
     <>
-      <HeadPage title="Example react" />
+      <HeadPage title="Modal" />
       <Layout>
         {/* <Carrusel /> */}
         {/* <Modal></Modal> */}

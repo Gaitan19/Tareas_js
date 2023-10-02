@@ -63,7 +63,7 @@ const Dashboard = () => {
                   ],
                   datasets: [
                     {
-                      label: 'My First dataset',
+                      label: '$',
                       backgroundColor: 'transparent',
                       borderColor: 'rgba(255,255,255,.55)',
                       pointBackgroundColor: '#321fdb',
