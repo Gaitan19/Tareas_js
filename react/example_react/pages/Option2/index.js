@@ -1,4 +1,5 @@
 import Dashboard from '@/components/Dashboard';
+import ExampleTable from '@/components/ExampleTable';
 import HeadPage from '@/components/HeadPage';
 import Layout from '@/components/Layout';
 import MaterialUITable from '@/components/MaterialUITable';
@@ -14,8 +15,9 @@ export default function Option2() {
         {/* <Carrusel /> */}
         {/* <Modal></Modal> */}
         <Dashboard />
-        <TableSmart></TableSmart>
+        {/* <TableSmart></TableSmart> */}
         {/* <MaterialUITable></MaterialUITable> */}
+        <ExampleTable />
       </Layout>
     </>
   );

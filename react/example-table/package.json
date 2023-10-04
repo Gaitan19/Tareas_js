@@ -1,0 +1,20 @@
+{
+  "name": "example-table",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "watch-scss": "node-sass --source-map ./styles/css --watch ./styles/scss -o ./styles/css"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.2",
+    "next": "13.5.4",
+    "node-sass": "^9.0.0",
+    "prop-types": "^15.8.1",
+    "react": "^18",
+    "react-dom": "^18"
+  }
+}
