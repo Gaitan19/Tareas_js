@@ -11,11 +11,13 @@ import { useState } from 'react';
 import Carrusel from './carrusel';
 import Card from './card';
 
-const Modal = () => {
-  const [visible, setVisible] = useState(false);
+const Modal = (props) => {
+  const { setVisible, visible, data, children } = props;
+
+  // const [visible, setVisible] = useState(false);
   return (
     <>
-      <CButton onClick={() => setVisible(!visible)}>Launch demo modal</CButton>
+      {/* <CButton onClick={() => setVisible(!visible)}>Launch demo modal</CButton> */}
       <CModal
         size="xl"
         visible={visible}
@@ -28,7 +30,8 @@ const Modal = () => {
           <CModalTitle id="LiveDemoExampleLabel">Modal title</CModalTitle>
         </CModalHeader>
         <CModalBody>
-          <Card></Card>
+          {/* <Card></Card> */}
+          {children}
         </CModalBody>
         <CModalFooter>
           <CButton color="secondary" onClick={() => setVisible(false)}>
@@ -39,6 +42,20 @@ const Modal = () => {
       </CModal>
     </>
   );
+};
+
+Modal.propTypes = {
+  setVisible: PropTypes.func,
+  visible: PropTypes.bool,
+  data: PropTypes.object,
+  children: PropTypes.node,
+};
+
+Modal.defaultProps = {
+  setVisible: () => {},
+  visible: false,
+  data: {},
+  children: <></>,
 };
 
 export default Modal;

@@ -1,3 +1,5 @@
+// import MaterialTable from "material-table";
+
 import MaterialTable from "material-table";
 
 const Table = () => {
@@ -11,7 +13,7 @@ const Table = () => {
     },
   ];
 
-  const rows = [
+  const data = [
     { lastName: "Snow", firstName: "Jon", age: 35 },
     { lastName: "Lannister", firstName: "Cersei", age: 42 },
     { lastName: "Lannister", firstName: "Jaime", age: 45 },
@@ -32,7 +34,8 @@ const Table = () => {
 
   return (
     <div>
-      <MaterialTable columns={columns} data={rows} />
+      <MaterialTable columns={columns} data={} />
+      hola
     </div>
   );
 };
