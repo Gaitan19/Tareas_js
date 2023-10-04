@@ -1,7 +1,8 @@
 import { Button } from '@mui/material';
 import { DataGrid } from '@mui/x-data-grid';
 import * as React from 'react';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
+import { useReactToPrint } from 'react-to-print';
 import Modal from '../Menu/modal';
 import { people } from '@/constants/people';
 
@@ -65,15 +66,7 @@ const MaterialUITable = () => {
       age: person.age,
     });
   });
-  // { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
-  // { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
-  // { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
-  // { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },
-  // { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: null },
-  // { id: 6, lastName: 'Melisandre', firstName: null, age: 150 },
-  // { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
-  // { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
-  // { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
+
   const options = {
     filter: true,
     // selectableRows: 'multiple',
@@ -82,31 +75,46 @@ const MaterialUITable = () => {
     rowsPerPage: 5,
   };
 
+  const componentPDF = useRef();
+
+  const generatePDF = useReactToPrint({
+    content: () => componentPDF.current,
+    documentTitle: 'PeopleData',
+    onAfterPrint: () => alert('Data saved in pdf'),
+  });
+
   return (
-    <div style={{ height: 400, width: '100%' }}>
-      {isClient && (
-        <DataGrid
-          rows={rows}
-          columns={columns}
-          options={options}
-          initialState={{
-            pagination: {
-              paginationModel: { page: 0, pageSize: 5 },
-            },
-          }}
-          pageSizeOptions={[5, 10]}
-          // checkboxSelection
-          disableRowSelectionOnClick
-          disableColumnSelector
-        />
-      )}
-      {visible && (
-        <Modal visible={visible} setVisible={setVisible}>
-          <h2>{data.firstName}</h2>
-          <h2>{data.age}</h2>
-        </Modal>
-      )}
-    </div>
+    <>
+      <div>
+        <Button color="success" onClick={generatePDF}>
+          PDF
+        </Button>
+      </div>
+      <div style={{ height: 400, width: '100%' }} ref={componentPDF}>
+        {isClient && (
+          <DataGrid
+            rows={rows}
+            columns={columns}
+            options={options}
+            initialState={{
+              pagination: {
+                paginationModel: { page: 0, pageSize: 5 },
+              },
+            }}
+            pageSizeOptions={[5, 10]}
+            // checkboxSelection
+            disableRowSelectionOnClick
+            disableColumnSelector
+          />
+        )}
+        {visible && (
+          <Modal visible={visible} setVisible={setVisible}>
+            <h2>{data.firstName}</h2>
+            <h2>{data.age}</h2>
+          </Modal>
+        )}
+      </div>
+    </>
   );
 };
 

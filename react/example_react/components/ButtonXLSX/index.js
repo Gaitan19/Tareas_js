@@ -1,5 +1,5 @@
 /* eslint-disable react/forbid-prop-types */
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Button, Spinner } from 'reactstrap';
 import * as XLSX from 'xlsx';
 import PropTypes from 'prop-types';
