@@ -11,6 +11,7 @@ import {
 import { v4 } from 'uuid';
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
+import { List, ListItem, ListItemButton, ListItemText } from '@mui/material';
 import { menuOptions } from '@/constants/routes';
 
 const Menu = (props) => {
@@ -20,39 +21,44 @@ const Menu = (props) => {
   const renderMenu = () => {
     return menuOptions.map((option) => {
       const isActive = router.pathname === option.route;
-      console.log('option :>> ', option);
-      console.log('isActive :>> ', isActive);
-      console.log('_____________________________');
+
       return (
-        <CNavItem key={v4()} className={` ${isActive && 'Item-active'}`}>
-          <CNavLink href={option.route}>{option.text}</CNavLink>
-        </CNavItem>
+        // <CNavItem key={v4()} className={` ${isActive && 'Item-active'}`}>
+        //   <CNavLink href={option.route}>{option.text}</CNavLink>
+        // </CNavItem>
+        <ListItem key={v4()} className={` ${isActive && 'Item-active'}`}>
+          <ListItemButton href={option.route}>
+            <ListItemText primary={option.text} />
+          </ListItemButton>
+        </ListItem>
       );
     });
   };
 
   return (
-    <COffcanvas
-      id="offcanvasNavbar"
-      placement="end"
-      portal={false}
-      visible={visible}
-      onHide={() => setVisible(false)}
-      backdrop={false}
-      className="Menu"
-    >
-      <COffcanvasHeader>
-        <COffcanvasTitle>Menu</COffcanvasTitle>
-        <CCloseButton
-          className="text-reset"
-          onClick={() => setVisible(false)}
-        />
-      </COffcanvasHeader>
+    // <COffcanvas
+    //   id="offcanvasNavbar"
+    //   placement="end"
+    //   portal={false}
+    //   visible={visible}
+    //   onHide={() => setVisible(false)}
+    //   backdrop={false}
+    //   className="Menu"
+    // >
+    //   <COffcanvasHeader>
+    //     <COffcanvasTitle>Menu</COffcanvasTitle>
+    //     <CCloseButton
+    //       className="text-reset"
+    //       onClick={() => setVisible(false)}
+    //     />
+    //   </COffcanvasHeader>
 
-      <COffcanvasBody>
-        <CNavbarNav>{renderMenu()}</CNavbarNav>
-      </COffcanvasBody>
-    </COffcanvas>
+    //   <COffcanvasBody>
+    // <CNavbarNav>{renderMenu()}</CNavbarNav>
+    <List>{renderMenu()}</List>
+
+    //   </COffcanvasBody>
+    // </COffcanvas>
   );
 };
 
