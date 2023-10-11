@@ -1,4 +1,5 @@
 import AutoComplete from '@/components/AutoComplete';
+import Counter from '@/components/Counter';
 import DatePicker from '@/components/DatePicker';
 import HeadPage from '@/components/HeadPage';
 import Layout from '@/components/Layout';
@@ -10,10 +11,13 @@ export default function MenuPrincipal() {
     <>
       <HeadPage title="Example react" />
       <Layout>
-        {/* <Chart></Chart> */}
-        {/* <Material></Material> */}
-        {/* <DatePicker></DatePicker> */}
-        <AutoComplete></AutoComplete>
+        <div className="Container">
+          {/* <Chart></Chart> */}
+          {/* <Material></Material> */}
+          {/* <DatePicker></DatePicker> */}
+          <AutoComplete></AutoComplete>
+          <Counter />
+        </div>
       </Layout>
     </>
   );

@@ -23,9 +23,6 @@ const Menu = (props) => {
       const isActive = router.pathname === option.route;
 
       return (
-        // <CNavItem key={v4()} className={` ${isActive && 'Item-active'}`}>
-        //   <CNavLink href={option.route}>{option.text}</CNavLink>
-        // </CNavItem>
         <ListItem key={v4()} className={` ${isActive && 'Item-active'}`}>
           <ListItemButton href={option.route}>
             <ListItemText primary={option.text} />
@@ -63,8 +60,13 @@ const Menu = (props) => {
 };
 
 Menu.propTypes = {
-  visible: PropTypes.bool.isRequired,
-  setVisible: PropTypes.func.isRequired,
+  visible: PropTypes.bool,
+  setVisible: PropTypes.func,
+};
+
+Menu.defaultProps = {
+  visible: false,
+  setVisible: () => {},
 };
 
 export default Menu;

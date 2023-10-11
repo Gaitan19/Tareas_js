@@ -40,18 +40,20 @@ export default function Option2() {
     <>
       <HeadPage title="Modal" />
       <Layout>
-        {/* <Carrusel /> */}
-        <Modal></Modal>
-        <Dashboard />
-        {/* <TableSmart></TableSmart> */}
-        <MaterialUITable></MaterialUITable>
-        <BotonExcelEstilizado
-          titleDocument="peopeInformation"
-          title={title}
-          moreInformation={moreInformation}
-          table={table}
-        />
-        {/* <ExampleTable /> */}
+        <div className="Container">
+          {/* <Carrusel /> */}
+          {/* <Modal></Modal> */}
+          <Dashboard />
+          {/* <TableSmart></TableSmart> */}
+          <MaterialUITable></MaterialUITable>
+          <BotonExcelEstilizado
+            titleDocument="peopeInformation"
+            title={title}
+            moreInformation={moreInformation}
+            table={table}
+          />
+          {/* <ExampleTable /> */}
+        </div>
       </Layout>
     </>
   );

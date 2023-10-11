@@ -11,10 +11,9 @@ import { CChartBar, CChartLine } from '@coreui/react-chartjs';
 
 const Dashboard = () => {
   return (
-    <div>
-      {' '}
+    <div className="Container-dash">
       <CRow>
-        <CCol sm={6}>
+        <CCol>
           <CWidgetStatsA
             className="mb-4"
             color="primary"
